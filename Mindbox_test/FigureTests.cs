@@ -18,11 +18,15 @@ namespace Mindbox_test
         }
 
         [TestCase(5, 4, 3, ExpectedResult = 6)]
+        [TestCase(25, 40, 25, ExpectedResult = 300)]
+        [TestCase(51, 52, 53, ExpectedResult = 1170)]
+        [TestCase(13, 5, 12, ExpectedResult = 30)]
+        [TestCase(8, 15, 17, ExpectedResult = 60)]
         [Test]
-        public void TestTriangleArea(double side1, double side2, double side3, double expectedArea)
+        public double TestTriangleArea(double side1, double side2, double side3)
         {
             IFigure figure = new Triangle(side1, side2, side3);
-            Assert.That(expectedArea, Is.EqualTo(figure.CalculateArea()));
+            return figure.CalculateArea();
         }
     }
 }
