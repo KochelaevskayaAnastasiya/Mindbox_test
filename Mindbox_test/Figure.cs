@@ -38,11 +38,11 @@ namespace Mindbox_test
 
         public Triangle(double sideA, double sideB, double sideC)
         {
-            //значения сторон заносятся по убыванию
+            //значения сторон заносятся по возрастанию
             //простейшая сортировка
-            if (sideA < sideB) (sideA, sideB) = (sideB, sideA);
-            if (sideB < sideC) (sideB, sideC) = (sideC, sideB);
-            if (sideA < sideB) (sideA, sideB) = (sideB, sideA);
+            if (sideA > sideB) (sideA, sideB) = (sideB, sideA);
+            if (sideB > sideC) (sideB, sideC) = (sideC, sideB);
+            if (sideA > sideB) (sideA, sideB) = (sideB, sideA);
 
             this.SideA = sideA;
             this.SideB = sideB;
