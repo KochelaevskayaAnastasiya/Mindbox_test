@@ -1,4 +1,4 @@
-﻿using Mindbox_test;
+﻿using LibraryCalculate;
 
 Console.WriteLine("Введите тип фигуры");
 var type = Console.ReadLine();
