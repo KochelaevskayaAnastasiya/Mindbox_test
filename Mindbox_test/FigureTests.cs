@@ -17,7 +17,7 @@ namespace Mindbox_test
             Assert.That(Math.PI * Math.Pow(5, 2), Is.EqualTo(figure.CalculateArea()));
         }
 
-        [TestCase(5, 4, 3, ExpectedResult = 6)]
+        [TestCase(5, 4, 3, ExpectedResult = 6)]//прямоугольный
         [TestCase(25, 40, 25, ExpectedResult = 300)]
         [TestCase(51, 52, 53, ExpectedResult = 1170)]
         [TestCase(13, 5, 12, ExpectedResult = 30)]
