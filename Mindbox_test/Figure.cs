@@ -11,26 +11,20 @@ namespace Mindbox_test
         double CalculateArea();
     }
 
-    public abstract class Figure : IFigure
-    {
-        public abstract double CalculateArea();
-    }
-
-    public class Circle : Figure
+    public class Circle : IFigure
     {
         public double Radius { get; set; }
         public Circle(double radius)
         {
             Radius = radius;
         }
-
-        public override double CalculateArea()
+        public double CalculateArea()
         {
             return Math.PI * Math.Pow(Radius, 2);
         }
     }
 
-    public class Triangle : Figure
+    public class Triangle : IFigure
     {
         public double SideA { get; set; }
         public double SideB { get; set; }
@@ -55,7 +49,7 @@ namespace Mindbox_test
             return Math.Pow(a, 2) + Math.Pow(b, 2) == Math.Pow(c, 2);
         }
 
-        public override double CalculateArea()
+        public double CalculateArea()
         {
             //если треугольник прямоугольный то высчитываем по формуле 
             if (IsRightTriangle(SideA, SideB, SideC))
