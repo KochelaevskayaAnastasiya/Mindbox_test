@@ -1,0 +1,8 @@
+SELECT
+name_product,
+name_category
+FROM [Product]
+FULL JOIN [ProductToCategory]
+ON [Product].id_product = [ProductToCategory].id_product
+LEFT JOIN [Category]
+ON [ProductToCategory].id_category = [Category].id_category;
